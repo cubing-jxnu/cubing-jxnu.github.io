@@ -16,7 +16,3 @@ Route::get('/', function () {
 })->name('home');
 
 Auth::routes();
-
-Route::get('/home', function () {
-    return view('welcome');
-});

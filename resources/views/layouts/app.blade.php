@@ -8,16 +8,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>
-        @yield('title', 'Cubing-JXNU')
-    </title>
+    <title>@yield('title', 'Cubing-JXNU')</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        @yield('links')
+     @yield('links')
     
     <style>
-        .navbar{ margin-bottom: 0; }
         @yield('style')
     </style>
 </head>
@@ -42,11 +39,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
+                   
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
