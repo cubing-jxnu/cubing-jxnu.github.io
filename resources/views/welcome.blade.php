@@ -19,7 +19,7 @@
     }
 
     .full-height {
-        height: 90vh;
+        height: 85vh;
     }
 
     .flex-center {
@@ -48,6 +48,9 @@
 @endsection
 
  @section('content')
+ <!-- 粒子背景插件 -->
+    <script color="0,0,0" opacity="0.7" count="40" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js" type="text/javascript" charset="utf-8"></script>
+
     <div class="flex-center position-ref full-height">
         <div class="content">
             <div class="title">

@@ -20,10 +20,19 @@
         .navbar-brand {
             padding: 5px 15px;
         }
+        .navbar-static-top {
+    border-color: #e7e7e7;
+    background-color: #fff;
+    box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
+    border-top: 4px solid #a5d6fb;
+    margin-top: 0px;
+}
         @yield('style')
     </style>
 </head>
 <body>
+    
+
     <div id="app">
         <nav class="navbar navbar-default sticky-top navbar-static-top">
             <div class="container">
