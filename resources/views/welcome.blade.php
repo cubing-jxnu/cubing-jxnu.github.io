@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Welcome to Cubing-JXNU')
+@section('title', '江西师范大学 Cubing 魔方协会')
 
 @section('links')
     <!-- Fonts -->
@@ -43,30 +43,17 @@
     }
 
     .title {
-        font-size: 84px;
-    }
-
-    .links > a {
-        color: #636b6f;
-        padding: 0 25px;
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .m-b-md {
-        margin-bottom: 30px;
+        font-size: 75px;
     }
 @endsection
 
  @section('content')
     <div class="flex-center position-ref full-height">
         <div class="content">
-            <div class="title m-b-md">
-                Welcome
+            <div class="title">
+                Only Cube
             </div>
+            <p class="lead">有魔 · 方可转动世界</p>
         </div>
     </div>
  @endsection

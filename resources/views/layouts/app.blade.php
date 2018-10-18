@@ -7,7 +7,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="icon" sizes="256x256" href="/img/logo/icon.png">
+    <link rel="apple-touch-icon" href="/img/logo/icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/img/logo/icon.png">
     <title>@yield('title', 'Cubing-JXNU')</title>
 
     <!-- Styles -->
@@ -15,6 +17,9 @@
      @yield('links')
     
     <style>
+        .navbar-brand {
+            padding: 5px 15px;
+        }
         @yield('style')
     </style>
 </head>
@@ -33,13 +38,22 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+<!--                         <img src="/img/logo/icon.png" alt="Logo" height="22" width="22" style="
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+"> -->
+                    <a class="navbar-brand" href="{{ url('/') }}" title="江西师范大学 Cubing 魔方协会">
+                        <img src="/img/logo/icon.png" height="40" style="display: inline-block;">
+                        Cubing 师大
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                   
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ route('home') }}">首页</a></li>
+                    </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->

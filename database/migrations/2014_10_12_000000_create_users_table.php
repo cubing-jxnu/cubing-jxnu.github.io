@@ -32,9 +32,9 @@ class CreateUsersTable extends Migration
                 'password'  => bcrypt('superadmin')
             ],
             [
-                'name'      => 'Admin',
-                'email'     => 'admin@admin.com',
-                'password'  => bcrypt('admin')
+                'name'      => '苏亦坤',
+                'email'     => 'wujiankun1998@qq.com',
+                'password'  => bcrypt('iPadwjk1998')
             ],
         ];
 
