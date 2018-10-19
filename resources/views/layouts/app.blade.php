@@ -47,12 +47,6 @@
                     </button>
 
                     <!-- Branding Image -->
-<!--                         <img src="/img/logo/icon.png" alt="Logo" height="22" width="22" style="
-    float: left;
-    height: 40px;
-    width: 40px;
-    margin: 5px;
-"> -->
                     <a class="navbar-brand" href="{{ url('/') }}" title="江西师范大学 Cubing 魔方协会">
                         <img src="/img/logo/icon.png" height="40" style="display: inline-block;">
                         Cubing 师大
@@ -95,7 +89,10 @@
             </div>
         </nav>
 
+        <div class="container">
+        @include('layouts._messages')
         @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->

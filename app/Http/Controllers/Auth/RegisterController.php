@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Mail;
 
 class RegisterController extends Controller
 {
@@ -68,4 +69,22 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function confirmEmail($token)
+    {
+        $user = User::where('activation_token', $token)->firstOrFail();
+
+        $user->activated = true;
+        $user->activation_token = null;
+        $user->save();
+
+        $this->guard()->login($user);
+
+        session()->flash('success', '恭喜你，激活成功！ 欢迎来到 Cubing 师大，您将在这里开启一段新的旅程～');
+        return redirect('/');
+        // return redirect()->route('users.show', [$user]);
+    }
+
+   
+
 }
