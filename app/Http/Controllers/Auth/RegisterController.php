@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Mail;
+//use Mail;
+use Illuminate\Support\Facades\Mail;
+//use Illuminate\Mail;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -49,7 +53,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -67,6 +71,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'activated' => false,
+            'activation_token' => str_random(20),
         ]);
     }
 
@@ -85,6 +91,28 @@ class RegisterController extends Controller
         // return redirect()->route('users.show', [$user]);
     }
 
-   
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
 
+        event(new Registered($user = $this->create($request->all())));
+
+        $this->sendEmailConfirmationTo($user);
+        session()->flash('success', '验证邮件已发送到你的注册邮箱上，请注意查收。');
+        return redirect('/');
+    }
+
+    public function sendEmailConfirmationTo($user)
+    {
+        $view = 'auth.emails.confirm';
+        $data = compact('user');
+        $from = 'cubing.jxnu@foxmail.com';
+        $name = '江西师范大学 Cubing 魔方协会';
+        $to = $user->email;
+        $subject = "感谢注册江西师范大学 Cubing 魔方协会网站！请确认你的邮箱。";
+
+        Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
+            $message->from($from, $name)->to($to)->subject($subject);
+        });
+    }
 }

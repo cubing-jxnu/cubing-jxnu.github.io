@@ -40,6 +40,43 @@ class LoginController extends Controller
     }
 
 
+    public function login(Request $request)
+    {
+        $this->validateLogin($request);
+
+        // If the class is using the ThrottlesLogins trait, we can automatically throttle
+        // the login attempts for this application. We'll key this by the username and
+        // the IP address of the client making these requests into this application.
+        if ($this->hasTooManyLoginAttempts($request)) {
+            $this->fireLockoutEvent($request);
+
+            return $this->sendLockoutResponse($request);
+        }
+
+
+
+        if ($this->attemptLogin($request)) {
+
+            if (!$this->guard()->user()->activated) {
+                $this->guard()->logout();
+                $request->session()->invalidate();
+
+                session()->flash('warning', '你的账号未激活，请检查邮箱中的注册邮件进行激活。');
+                return redirect('/');
+            }
+
+            session()->flash('success', '欢迎回来，Cubing酱在此等候多时啦~');
+            return $this->sendLoginResponse($request);
+        }
+
+        // If the login attempt was unsuccessful we will increment the number of attempts
+        // to login and redirect the user back to the login form. Of course, when this
+        // user surpasses their maximum number of attempts they will get locked out.
+        $this->incrementLoginAttempts($request);
+
+        return $this->sendFailedLoginResponse($request);
+    }
+
     public function logout(Request $request)
     {
         $this->guard()->logout();
