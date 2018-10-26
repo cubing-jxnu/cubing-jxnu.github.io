@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('register/confirm/{token}', 'Auth\RegisterController@confirmEmail')->name('confirm.email');
+
+Route::get('user/{user}','UserController@show')->name('user.profile');

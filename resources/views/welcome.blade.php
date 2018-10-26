@@ -8,48 +8,45 @@
 @endsection
 
 @section('style')
-<!-- Styles -->
+    <!-- Styles -->
+
     html, body {
-        background-color: #fff;
-        color: #636b6f;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 100;
-        height: 100vh;
-        margin: 0;
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
     }
 
     .full-height {
-        height: 85vh;
+    height: 85vh;
     }
 
     .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     }
 
     .position-ref {
-        position: relative;
-    }
-
-    .top-right {
-        position: absolute;
-        right: 10px;
-        top: 18px;
+    position: relative;
     }
 
     .content {
-        text-align: center;
+    text-align: center;
     }
 
     .title {
-        font-size: 75px;
+    font-size: 75px;
     }
+
 @endsection
 
- @section('content')
- <!-- 粒子背景插件 -->
-    <script color="0,0,0" opacity="0.7" count="40" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js" type="text/javascript" charset="utf-8"></script>
+@section('content')
+    <!-- 粒子背景插件 -->
+    <script color="0,0,0" opacity="0.7" count="40" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js"
+            type="text/javascript" charset="utf-8"></script>
 
     <div class="flex-center position-ref full-height">
         <div class="content">
@@ -59,4 +56,4 @@
             <p class="lead">有魔 · 方可转动世界</p>
         </div>
     </div>
- @endsection
+@endsection
