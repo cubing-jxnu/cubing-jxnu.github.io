@@ -111,8 +111,6 @@ trait ResetsPasswords
         event(new PasswordReset($user));
 
         $this->guard()->login($user);
-
-        session()->flash('success', '密码已重置，请妥善保管。');
     }
 
     /**
