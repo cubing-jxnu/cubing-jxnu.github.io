@@ -6,7 +6,7 @@
 
     {{-- 头像--}}
     @if ($user->avatar)
-        <img class="avatar img-circle" src="/img/logo/icon.png" alt="avatar">
+        <img class="avatar img-circle" src="{{ $user->avatar }}" alt="avatar">
         {{--<img class="avatar img-rounded" src="/img/logo/icon.png" alt="avatar" width="100" height="100">--}}
     @else
         <img class="avatar img-circle" src="/img/avatar/unset.jpg" alt="avatar">
@@ -14,17 +14,21 @@
     @endif
 
     {{-- 用户名 --}}
-    <h2>{{ $user->name }}</h2>
+    <h3 class="text-info" style="font-weight: 500;">
+        {{ $user->name }}
+    </h3>
 
     {{-- 身份 --}}
     <div class="row tips">
-        @if($user->realname)
-            <a type="button" class="label label-info"
-               data-toggle="tooltip" title="用户身份">
-                <i class="fa fa-user"></i>
-                {{ $user->realname }}
-            </a>
-        @endif
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+            @foreach($identifies as $identify)
+                <a type="button" class="label label-info"
+                   data-toggle="tooltip" title="用户身份">
+                    <i class="fa fa-user"></i>
+                    {{ $identify->name }}
+                </a>
+            @endforeach
+        </div>
     </div>
 
     {{-- 分割线 --}}
@@ -43,6 +47,15 @@
                 <i class="fa fa-envelope"></i>
                 E-Mail
             </a>
+
+            {{-- qq --}}
+            @if ( $user->qq )
+                <a type="button" class="label label-info"
+                   data-toggle="tooltip" title="{{ $user->qq }}" target="_blank">
+                    <i class="fab fa-qq"></i>
+                    QQ
+                </a>
+            @endif
 
             {{-- WCA ID --}}
             @if ( $user->WCAID )
@@ -65,30 +78,29 @@
     </div>
 
     {{-- 个人简介 --}}
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-        <p class="text-center">
-            @if($user->introduction)
-                {{ $user->introduction }}
-            @else
-                {{--个人简介为空--}}
-            @endif
-        </p>
-        <div style="height: 10px;">
-            {{-- 占位行 --}}
+    @if($user->introduction)
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                {{-- 个人简介 --}}
+                <p>
+                    <b>个人简介</b>
+                </p>
+                <p class="small text-muted">
+                    {{ $user->introduction }}
+                </p>
+
+            </div>
         </div>
-    </div>
+    @endif
 
     {{-- 修改资料按钮 --}}
     <div class="row">
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-            <a class="btn btn-default btn-block" type="submit">
+
+            <a class="btn btn-info btn-block" type="submit" style="margin: 10px auto 20px;" href="{{ route('user.edit', Auth::user()) }}">
                 <i class="fa fa-edit"></i>
                 编辑个人资料
             </a>
         </div>
-    </div>
-
-    <div style="height: 20px;">
-        {{-- 占位行 --}}
     </div>
 </div>

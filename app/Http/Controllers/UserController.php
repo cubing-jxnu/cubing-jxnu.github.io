@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\UserRequest;
+use App\Tool\ImageUploadTool;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['show']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -46,32 +55,65 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
+        $identifies = DB::table('user_has_identifies')
+            ->join('identifies', 'user_has_identifies.identify_id', '=', 'identifies.id')
+            ->where('user_has_identifies.user_id', '=', $user->id)
+            ->select('identifies.name')
+            ->get();
+
         return view('user.profile', [
             'user' => $user,
+            'identifies' => $identifies,
         ]);
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * @param User $user
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function edit(User $user)
     {
-        //
+        //验证权限
+        $this->authorize('update', $user);
+
+        $identifies = DB::table('user_has_identifies')
+            ->join('identifies', 'user_has_identifies.identify_id', '=', 'identifies.id')
+            ->where('user_has_identifies.user_id', '=', $user->id)
+            ->select('identifies.name')
+            ->get();
+
+        return view('user.edit', [
+            'user' => $user,
+            'identifies' => $identifies,
+        ]);
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * @param UserRequest $request
+     * @param ImageUploadTool $uploader
+     * @param User $user
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, ImageUploadTool $uploader, User $user)
     {
-        //
+        $this->authorize('update', $user);
+
+        $data = $request->all();
+
+        if ($request->avatar) {
+            $result = $uploader->save($request->avatar, 'avatar', $user->id);
+            if ($result) {
+                $data['avatar'] = $result['path'];
+            }
+        }
+
+        $user->update($data);
+
+        return redirect()
+            ->route('user.profile', $user->id)
+            ->with('success', '个人资料更新成功！');
     }
 
     /**

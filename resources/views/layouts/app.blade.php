@@ -12,6 +12,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/img/logo/icon.png">
     <title>@yield('title', 'Cubing-JXNU')</title>
     <script src="https://use.fontawesome.com/4d11ec76b3.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('links')
@@ -58,7 +60,12 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ route('home') }}">首页</a></li>
+                    <li>
+                        <a href="{{ route('home') }}">
+                            <i class="fa fa-home"></i>
+                            首页
+                        </a>
+                    </li>
                 </ul>
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -70,17 +77,34 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false" aria-haspopup="true" v-pre>
+                                @if(Auth::user()->avatar)
+                                    <img class="img-circle" src="{{ Auth::user()->avatar }}" alt="avatar" width="20">
+                                @else
+                                    <img class="img-circle" src="/img/avatar/unset.jpg" alt="avatar" width="20">
+                                @endif
+                                &nbsp;
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu">
                                 <li>
+                                    <a href="{{ route('user.profile', Auth::user()) }}">
+                                        <i class="fa fa-user"></i>
+                                        个人主页
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('user.edit', Auth::user()) }}">
+                                        <i class="fa fa-edit"></i>
+                                        编辑个人资料
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                       onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                        <i class="fa fa-sign-out-alt"></i>
                                         退出登录
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                           style="display: none;">
                                         {{ csrf_field() }}

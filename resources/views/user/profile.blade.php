@@ -18,7 +18,7 @@
     background-color: transparent;
     color: #636b6f;
     border: 1px solid #636b6f;
-    border-radius: 10px;
+    border-radius: 1em;
     margin: 5px;
     display: inline-block;
     }
@@ -27,7 +27,7 @@
     color: #eeeeee;
     background-color: #2a2a2a;
     border: 1px solid #636b6f;
-    border-radius: 10px;
+    border-radius: 1em;
     }
 @endsection
 
