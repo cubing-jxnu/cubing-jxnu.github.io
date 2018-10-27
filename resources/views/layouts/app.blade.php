@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="/img/logo/icon.png">
     <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/img/logo/icon.png">
     <title>@yield('title', 'Cubing-JXNU')</title>
-
+    <script src="https://use.fontawesome.com/4d11ec76b3.js"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('links')
