@@ -19,6 +19,7 @@
     color: #636b6f;
     border: 1px solid #636b6f;
     border-radius: 1em;
+    line-height:1.2;
     margin: 5px;
     display: inline-block;
     }
@@ -29,15 +30,19 @@
     border: 1px solid #636b6f;
     border-radius: 1em;
     }
+
+    .profile_card {
+    margin-bottom: 20px;
+    }
 @endsection
 
 @section('content')
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 profile_card">
             @include('user._profile_card', ['user' => $user])
         </div>
 
-        <div class="col-md-9" style="background:#000;"></div>
+        <div class="col-md-9"></div>
     </div>
 @endsection
 
