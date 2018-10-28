@@ -1,4 +1,4 @@
-<div class="text-center" style="background:#fff">
+<div class="text-center profile-card">
 
     <div style="height: 20px;">
         {{-- 占位行 --}}
