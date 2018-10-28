@@ -8,6 +8,7 @@ img.avatar:hover {
 border-color: #9feee9;
 transition: all 0.3s;
 }
+
 .tips a.label {
 background-color: transparent;
 color: #636b6f;
@@ -30,5 +31,5 @@ margin-bottom: 20px;
 background:#fff;
 border: 1px solid #d3e0e9;
 border-radius: 4px;
-/*border-color: #d3e0e9;*/
+padding: 20px 0 10px;
 }
