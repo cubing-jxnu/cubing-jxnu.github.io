@@ -10,7 +10,7 @@
     @endif
 
     {{-- 用户名 --}}
-    <h3 class="text-info" style="font-weight: 500;">
+    <h3 class="text-info bold">
         {{ $user->name }}
     </h3>
 
@@ -78,12 +78,8 @@
         <div class="row">
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
                 {{-- 个人简介 --}}
-                <p>
-                    <b>个人简介</b>
-                </p>
-                <p class="small text-muted">
-                    {{ $user->introduction }}
-                </p>
+                <p><b>个人简介</b></p>
+                <p class="small text-muted">{{ $user->introduction }}</p>
 
             </div>
         </div>
@@ -94,7 +90,7 @@
     <div class="row">
         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 
-            <a class="btn btn-info btn-block" type="submit" style="margin: 10px auto 0;" href="{{ route('user.edit', Auth::user()) }}">
+            <a class="btn btn-info btn-block btn-profile-edit" type="submit" style="" href="{{ route('user.edit', Auth::user()) }}">
                 <i class="fa fa-edit"></i>
                 编辑个人资料
             </a>

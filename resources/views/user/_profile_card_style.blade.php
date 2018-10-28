@@ -33,3 +33,11 @@ border: 1px solid #d3e0e9;
 border-radius: 4px;
 padding: 20px 0 10px;
 }
+
+.profile-card .btn-profile-edit {
+	margin: 10px auto 10px;
+}
+
+.bold {
+	font-weight: 500;
+}
