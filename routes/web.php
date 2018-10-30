@@ -22,3 +22,6 @@ Route::get('register/confirm/{token}', 'Auth\RegisterController@confirmEmail')->
 Route::get('user/{user}','UserController@show')->name('user.profile');
 Route::get('user/{user}/edit','UserController@edit')->name('user.edit');
 Route::put('user/{user}','UserController@update')->name('user.update');
+
+//抽奖
+Route::get('tools/lottery','ToolController@lottery')->name('tool.lottery');

@@ -66,6 +66,21 @@
                             首页
                         </a>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-toolbox"></i>
+                            工具箱
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ route('tool.lottery') }}">
+                                    <i class="fas fa-dice-two"></i>
+                                    抽奖
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
