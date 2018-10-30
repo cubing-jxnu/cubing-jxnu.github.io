@@ -158,7 +158,7 @@
             var begin = $("#Player_begin").val();
             var end = $("#Player_end").val();
             //填充输入框
-            if (begin - 0 !== NaN && end - 0 !== NaN && begin - end < 0) {
+            if (begin - 0 !== NaN && end - 0 !== NaN && begin - end <= 0) {
                 for (var i = begin; i <= end; i++) {
                     var preVal = $("#players").val();
                     $("#players").val(preVal + i + '\n');
