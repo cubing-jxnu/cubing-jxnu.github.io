@@ -32,6 +32,7 @@
                         <div class="form-group">
                             <label for="" class="avatar-label">用户头像</label>
                             <input type="file" name="avatar">
+                            <p class="small text-warning">请尽量上传正方型图片，否则会造成挤压，后续将开放裁剪功能避开此问题</p>
                             @if($user->avatar)
                                 <br>
                                 <img class="thumbnail img-responsive" src="{{ $user->avatar }}" width="200" />

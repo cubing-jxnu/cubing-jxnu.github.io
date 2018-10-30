@@ -78,7 +78,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false" aria-haspopup="true" v-pre>
                                 @if(Auth::user()->avatar)
-                                    <img class="img-circle" src="{{ Auth::user()->avatar }}" alt="avatar" width="20">
+                                    <img class="img-circle" src="{{ Auth::user()->avatar }}" alt="avatar" width="20" height="20">
                                 @else
                                     <img class="img-circle" src="/img/avatar/unset.jpg" alt="avatar" width="20">
                                 @endif
