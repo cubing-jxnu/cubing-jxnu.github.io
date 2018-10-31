@@ -108,7 +108,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://alg.cubing.net/">
+                                <a href="http://algdb.net/">
                                     <i class="far fa-hand-point-right"></i>
                                     AlgDB 公式库
                                 </a>
