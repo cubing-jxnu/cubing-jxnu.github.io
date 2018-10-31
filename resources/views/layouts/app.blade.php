@@ -75,8 +75,42 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{ route('tool.lottery') }}">
-                                    <i class="fas fa-dice-two"></i>
+                                    {{--<i class="fas fa-dice-two"></i>--}}
+                                    <i class="fas fa-dice"></i>
                                     抽奖
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-link"></i>
+                            友情链接
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://www.worldcubeassociation.org/">
+                                    <i class="far fa-hand-point-right"></i>
+                                    WCA 世界魔方协会
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cubingchina.com/">
+                                    <i class="far fa-hand-point-right"></i>
+                                    粗饼网
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://alg.cubing.net/">
+                                    <i class="far fa-hand-point-right"></i>
+                                    魔方图案生成器
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://alg.cubing.net/">
+                                    <i class="far fa-hand-point-right"></i>
+                                    AlgDB 公式库
                                 </a>
                             </li>
                         </ul>
