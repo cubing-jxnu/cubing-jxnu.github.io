@@ -31,7 +31,7 @@
                                     <span class="input-group-addon">到</span>
                                     <input id="Player_end" type="text" class="form-control" placeholder="20">
                                 </div><!-- /input-group --><br>
-                                <button class="btn btn-sm btn-primary btn-block" type="button" onclick="autoWrite()">
+                                <button id="autoWrite" class="btn btn-sm btn-primary btn-block" type="button" onclick="autoWrite()">
                                     开始填充
                                 </button>
                             </div>
@@ -93,8 +93,11 @@
 
             pos = Math.floor(Math.random() * canRow.length);
             if (Arr.length == 0 || canRow.length == 0) {
+                $("#start").val("抽 奖");
                 clearInterval(timer);
                 flag = false;
+                $("#winner-name").html("全部抽完啦~");
+                $("#start").val('抽不动了！').removeClass('btn-warning').addClass('btn-primary');
             }
             else {
                 $("#winner-name").html(Arr[canRow[pos]]);
@@ -125,6 +128,7 @@
                 flag = true;
                 timer = setInterval(changename, 50);
                 $("#start").val('停!').removeClass('btn-primary').addClass('btn-warning');
+                $("#autoWrite").addClass('disabled');
             }
             else {
                 $("#start").val('抽 奖').removeClass('btn-warning').addClass('btn-primary');
@@ -148,6 +152,9 @@
             $("#players").removeAttr("readonly");
             $("#winning table tbody").empty();
             haveplay = false;
+            $("#start").val('抽 奖').removeClass('btn-warning').addClass('btn-primary');
+            $("#autoWrite").removeClass('disabled');
+            flag=false;
         }
 
         //自动填充数字
