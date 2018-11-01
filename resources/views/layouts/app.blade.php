@@ -113,6 +113,12 @@
                                     AlgDB 公式库
                                 </a>
                             </li>
+                            <li>
+                                <a href="https://huazhechen.gitee.io/cuber/">
+                                    <i class="far fa-hand-point-right"></i>
+                                    魔方动态图生成器
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
