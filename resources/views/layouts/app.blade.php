@@ -102,15 +102,16 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://alg.cubing.net/">
-                                    <i class="far fa-hand-point-right"></i>
-                                    魔方图案生成器
-                                </a>
-                            </li>
-                            <li>
                                 <a href="http://algdb.net/">
                                     <i class="far fa-hand-point-right"></i>
                                     AlgDB 公式库
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://alg.cubing.net/">
+                                    <i class="far fa-hand-point-right"></i>
+                                    魔方图案生成器
                                 </a>
                             </li>
                             <li>
