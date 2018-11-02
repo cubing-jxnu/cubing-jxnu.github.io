@@ -80,6 +80,31 @@
                                     抽奖
                                 </a>
                             </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://algdb.net/">
+                                    <i class="fas fa-link"></i>
+                                    AlgDB 公式库
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://alg.cubing.net/">
+                                    <i class="fas fa-link"></i>
+                                    魔方图案生成器
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://huazhechen.gitee.io/cuber/">
+                                    <i class="fas fa-link"></i>
+                                    魔方动态图生成器
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.cubeskills.com/tools/pll-recognition-trainer/basic-test">
+                                    <i class="fas fa-link"></i>
+                                    PLL 训练（6 格观察法）
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -102,22 +127,15 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="http://algdb.net/">
+                                <a href="http://tieba.baidu.com/f?kw=%E9%AD%94%E6%96%B9&ie=utf-8">
                                     <i class="far fa-hand-point-right"></i>
-                                    AlgDB 公式库
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="https://alg.cubing.net/">
-                                    <i class="far fa-hand-point-right"></i>
-                                    魔方图案生成器
+                                    魔方吧-百度贴吧
                                 </a>
                             </li>
                             <li>
-                                <a href="https://huazhechen.gitee.io/cuber/">
+                                <a href="http://bbs.mf8-china.com/forum.php">
                                     <i class="far fa-hand-point-right"></i>
-                                    魔方动态图生成器
+                                    mf8 魔方吧论坛
                                 </a>
                             </li>
                         </ul>
