@@ -130,35 +130,50 @@
                                     抽奖
                                 </a>
                             </li>
-                            <li class="divider col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1"></li>
+                            <li class="divider"></li>
                             <li>
                                 <a href="http://algdb.net/">
                                     <i class="far fa-hand-point-right"></i>
                                     AlgDB 公式库
+                                    <span class="text-muted small">
+                                    (via algdb.net)
+                                    </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://alg.cubing.net/">
                                     <i class="far fa-hand-point-right"></i>
                                     魔方图案生成器
+                                    <span class="text-muted small">
+                                    (via alg.cubing.net)
+                                    </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://huazhechen.gitee.io/cuber/">
                                     <i class="far fa-hand-point-right"></i>
-                                    3D 魔方
+                                    3D 模拟魔方
+                                    <span class="text-muted small">
+                                    (via huazhechen.gitee.io)
+                                    </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.cubeskills.com/tools/pll-recognition-trainer/basic-test">
                                     <i class="far fa-hand-point-right"></i>
-                                    PLL 训练（6 格观察法）
+                                    PLL 训练(6 格观察法)
+                                    <span class="text-muted small">
+                                    (via cubeskills.com)
+                                    </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://fewestmov.es/">
                                     <i class="far fa-hand-point-right"></i>
-                                    最少步插入查找工具
+                                    最少步找插入工具
+                                    <span class="text-muted small">
+                                    (via fewestmov.es)
+                                    </span>
                                 </a>
                             </li>
                         </ul>
