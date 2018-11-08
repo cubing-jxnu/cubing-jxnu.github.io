@@ -145,7 +145,6 @@ echo "127.0.0.1    cubing.jxnu.club" | sudo tee -a /etc/hosts
 | [overtrue/laravel-lang](https://github.com/overtrue/laravel-lang) | 语言包 | 配置提示信息语言 |
 | [spatie/laravel-permission](https://github.com/spatie/laravel-permission) | 角色权限管理 | 角色和权限控制 |
 | [doctrine/dbal](https://github.com/doctrine/dbal) | 数据库抽象层 | 上传图片用 |
-| [summerblue/administrator](https://github.com/summerblue/administrator) | 管理后台 | 模型管理后台、配置信息管理后台 |
 
 ## 自定义 Artisan 命令
 
