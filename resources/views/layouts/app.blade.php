@@ -177,7 +177,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ $_SERVER["HTTP_HOST"] }}:2014/scramble-legacy/">
+                                <a href="http://{{ $_SERVER["HTTP_HOST"] }}:2014/scramble-legacy/">
                                     <i class="far fa-hand-point-right"></i>
                                     WCA 打乱生成器
                                     <span class="text-muted small">
