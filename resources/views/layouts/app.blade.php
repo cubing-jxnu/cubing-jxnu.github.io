@@ -132,7 +132,7 @@
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="http://algdb.net/">
+                                <a href="http://algdb.net/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     AlgDB 公式库
                                     <span class="text-muted small">
@@ -141,7 +141,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://alg.cubing.net/">
+                                <a href="https://alg.cubing.net/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     魔方图案生成器
                                     <span class="text-muted small">
@@ -150,7 +150,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://huazhechen.gitee.io/cuber/">
+                                <a href="https://huazhechen.gitee.io/cuber/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     3D 模拟魔方
                                     <span class="text-muted small">
@@ -159,7 +159,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.cubeskills.com/tools/pll-recognition-trainer/basic-test">
+                                <a href="https://www.cubeskills.com/tools/pll-recognition-trainer/basic-test" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     PLL 训练(6 格观察法)
                                     <span class="text-muted small">
@@ -168,7 +168,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://fewestmov.es/">
+                                <a href="https://fewestmov.es/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     最少步找插入工具
                                     <span class="text-muted small">
@@ -177,7 +177,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="http://{{ $_SERVER["HTTP_HOST"] }}:2014/scramble-legacy/">
+                                <a href="http://{{ $_SERVER["HTTP_HOST"] }}:2014/scramble-legacy/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     WCA 打乱生成器
                                     <span class="text-muted small">
@@ -195,25 +195,25 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="https://www.worldcubeassociation.org/">
+                                <a href="https://www.worldcubeassociation.org/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     WCA 世界魔方协会
                                 </a>
                             </li>
                             <li>
-                                <a href="https://cubingchina.com/">
+                                <a href="https://cubingchina.com/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     粗饼网
                                 </a>
                             </li>
                             <li>
-                                <a href="http://tieba.baidu.com/f?kw=%E9%AD%94%E6%96%B9&ie=utf-8">
+                                <a href="http://tieba.baidu.com/f?kw=%E9%AD%94%E6%96%B9&ie=utf-8" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     魔方吧-百度贴吧
                                 </a>
                             </li>
                             <li>
-                                <a href="http://bbs.mf8-china.com/forum.php">
+                                <a href="http://bbs.mf8-china.com/forum.php" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
                                     mf8 魔方吧论坛
                                 </a>
