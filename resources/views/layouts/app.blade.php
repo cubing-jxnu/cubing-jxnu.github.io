@@ -176,6 +176,15 @@
                                     </span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{ $_SERVER["HTTP_HOST"] }}:2014/scramble-legacy/">
+                                    <i class="far fa-hand-point-right"></i>
+                                    WCA 打乱生成器
+                                    <span class="text-muted small">
+                                    (via TNoodle-WCA-0.13.5)
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
