@@ -25,3 +25,10 @@ Route::put('user/{user}','UserController@update')->name('user.update');
 
 //抽奖
 Route::get('tools/lottery','ToolController@lottery')->name('tool.lottery');
+
+
+//比赛
+Route::get('competitions/{id}', 'CompetitionController@show')->name('competition.detail');
+Route::get('competitions', 'CompetitionController@index')->name('competition.list');
+Route::get('competitions/{id}/signUp', 'CompetitionController@signUp')->name('competition.signUp');
+Route::get('competitions/{id}/players', 'CompetitionController@players')->name('competition.players');

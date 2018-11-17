@@ -106,7 +106,6 @@
 
         function delRows(therow) {
             canRow.splice(therow, 1);
-
         }
 
         function roll() {

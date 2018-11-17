@@ -13,7 +13,9 @@
             @include('user._profile_card', ['user' => $user])
         </div>
 
-        <div class="col-md-9"></div>
+        <div class="col-md-9">
+
+        </div>
     </div>
 @endsection
 

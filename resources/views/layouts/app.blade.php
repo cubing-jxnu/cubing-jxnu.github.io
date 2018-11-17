@@ -30,56 +30,6 @@
             border-top: 4px solid #a5d6fb;
             margin-top: 0px;
         }
-
-        /* 自定义三级菜单 */
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu>.dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: -6px;
-            margin-left: -1px;
-            -webkit-border-radius: 0 6px 6px 6px;
-            -moz-border-radius: 0 6px 6px;
-            border-radius: 0 6px 6px 6px;
-        }
-
-        .dropdown-submenu:hover>.dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-submenu>a:after {
-            display: block;
-            content: " ";
-            float: right;
-            width: 0;
-            height: 0;
-            border-color: transparent;
-            border-style: solid;
-            border-width: 5px 0 5px 5px;
-            border-left-color: #ccc;
-            margin-top: 5px;
-            margin-right: -10px;
-        }
-
-        .dropdown-submenu:hover>a:after {
-            border-left-color: #fff;
-        }
-
-        .dropdown-submenu.pull-left {
-            float: none;
-        }
-
-        .dropdown-submenu.pull-left>.dropdown-menu {
-            left: -100%;
-            margin-left: 10px;
-            -webkit-border-radius: 6px 0 6px 6px;
-            -moz-border-radius: 6px 0 6px 6px;
-            border-radius: 6px 0 6px 6px;
-        }
-        /* 三级下拉菜单 */
         @yield('style')
     </style>
 
@@ -116,6 +66,12 @@
                             首页
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('competition.list') }}">
+                            <i class="fa fa-cubes"></i>
+                            赛事
+                        </a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fas fa-toolbox"></i>
@@ -123,14 +79,14 @@
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
+                            <li class="dropdown-header">站内工具合集</li>
                             <li>
                                 <a href="{{ route('tool.lottery') }}">
-                                    {{--<i class="fas fa-dice-two"></i>--}}
                                     <i class="fas fa-dice"></i>
                                     抽奖
                                 </a>
                             </li>
-                            <li class="divider"></li>
+                            <li class="dropdown-header">站外优秀工具合集</li>
                             <li>
                                 <a href="http://algdb.net/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
@@ -190,7 +146,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fas fa-link"></i>
-                            友情链接
+                            友链
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
@@ -203,23 +159,29 @@
                             <li>
                                 <a href="https://cubingchina.com/" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
-                                    粗饼网
+                                    粗饼 · 中国魔方赛事网
                                 </a>
                             </li>
                             <li>
                                 <a href="http://tieba.baidu.com/f?kw=%E9%AD%94%E6%96%B9&ie=utf-8" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
-                                    魔方吧-百度贴吧
+                                    魔方吧 - 百度贴吧
                                 </a>
                             </li>
                             <li>
                                 <a href="http://bbs.mf8-china.com/forum.php" target="_blank">
                                     <i class="far fa-hand-point-right"></i>
-                                    mf8 魔方吧论坛
+                                    mf8 - 魔方吧论坛
                                 </a>
                             </li>
                         </ul>
                     </li>
+                <li>
+                    <a class="" href="">
+                        <i class="far fa-star"></i>
+                        关于我们
+                    </a>
+                </li>
                 </ul>
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
