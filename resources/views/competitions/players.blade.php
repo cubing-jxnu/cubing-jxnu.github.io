@@ -48,11 +48,10 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <?php $count = 1; ?>
                             @foreach($players as $player)
                                 <tr>
                                     <td>
-                                        {{ $count++ }}
+                                        {{ $player->number }}
                                     </td>
                                     <td>
                                         @if($player->user_id)
@@ -63,10 +62,10 @@
                                             {{ $player->realname }}
                                         @endif
                                     </td>
-                                    <?php $play_events = explode(' ', $player->applyEventSpecs); ?>
+                                    <?php  ?>
                                     @foreach($comp_events as $comp_event)
                                         <td>
-                                            @if(in_array($comp_event->id, $play_events))
+                                            @if(in_array($comp_event->id, $player->events_arr))
                                                 <span class="cubing-icon event-{{ $comp_event->id }}"></span>
                                             @endif
                                         </td>

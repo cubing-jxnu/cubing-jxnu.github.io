@@ -57,20 +57,20 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($events as $event)
+                        @foreach($comp_events as $comp_event)
                             <tr>
                                 <td>
-                                    <span class="cubing-icon event-{{ $event->id }}"></span>
-                                    {{ $event->name }}
+                                    <span class="cubing-icon event-{{ $comp_event->id }}"></span>
+                                    {{ $comp_event->name }}
                                 </td>
                                 <td>
-                                    {{ $event->round }} 轮
+                                    {{ $comp_event->round }} 轮
                                 </td>
                                 <td>
-                                    {{ $event->format }}
+                                    {{ $comp_event->format->name }}
                                 </td>
                                 <td>
-                                    {{ $event->fee == 0 ? '无' : '￥'.$event->fee }}
+                                    {{ $comp_event->fee == 0 ? '无' : '￥'.$comp_event->fee }}
                                 </td>
                             </tr>
                         @endforeach

@@ -32,3 +32,5 @@ Route::get('competitions/{id}', 'CompetitionController@show')->name('competition
 Route::get('competitions', 'CompetitionController@index')->name('competition.list');
 Route::get('competitions/{id}/signUp', 'CompetitionController@signUp')->name('competition.signUp');
 Route::get('competitions/{id}/players', 'CompetitionController@players')->name('competition.players');
+Route::get('competitions/{id}/resultInput/{eventId}/{round}', 'CompetitionController@resultInput')->name('competition.resultInput');
+Route::any('competitions/addResult', 'CompetitionController@addResult')->name('competition.addResult');

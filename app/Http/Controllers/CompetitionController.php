@@ -29,10 +29,10 @@ class CompetitionController extends Controller
     public function show($id)
     {
         $hosts = [];
-        $events = [];
+        $comp_events = [];
 
         $competition = $this->getCompetition($id);
-        $events = $this->getEvents($competition);
+        $comp_events = $this->getEvents($competition);
 
         if ($competition->organiser) {
             $hosts_id = explode(' ', $competition->organiser);
@@ -47,7 +47,7 @@ class CompetitionController extends Controller
 
         return view('competitions.show', [
             'competition' => $competition,
-            'events' => $events,
+            'comp_events' => $comp_events,
             'organisers' => $organisers,
         ]);
     }
@@ -107,6 +107,7 @@ class CompetitionController extends Controller
 
         $players = $this->getPlayers($id);
 
+dd($comp_events);
 
         return view('competitions.players', [
             'competition' => $competition,
@@ -115,6 +116,40 @@ class CompetitionController extends Controller
         ]);
     }
 
+    public function resultInput($id, $eventId, $round)
+    {
+
+        $competition = $this->getCompetition($id);
+        $comp_events = $this->getEvents($competition);
+        $players = $this->getPlayers($id);
+
+        foreach($comp_events as $comp_event) {
+            if ($eventId == $comp_event->id) {
+                //有此项目
+                $event = $comp_event;
+                if ($round <= $comp_event->round) {
+                    //轮次合理
+                    return view('competitions.result_input', [
+                        'competition' => $competition,
+                        'comp_events' => $comp_events,
+                        'players' => $players,
+                        'event' => $event,
+                        'round' => $round,
+                    ]);
+                }
+                break;
+            }
+        }
+
+
+        return view('home');
+    }
+
+    public function addResult()
+    {
+
+        
+    }
 
     public function destroy()
     {
@@ -212,10 +247,14 @@ class CompetitionController extends Controller
             ->join('persons', 'persons.id', '=', 'sign_up.personId')
             ->where('competitionId', '=', $competitionId)
             ->where('status', '=', 1)
-            ->select('persons.*', 'sign_up.apply_at', 'sign_up.applyEventSpecs', 'sign_up.comment')
-            ->orderBy('sign_up.apply_at', 'ASC')
+            ->select('persons.*', 'sign_up.apply_at', 'sign_up.applyEventSpecs', 'sign_up.comment', 'sign_up.number as number')
+            ->orderBy('sign_up.number', 'ASC')
             ->get();
 
+        foreach ($players as $player) {
+            $player->events_arr = explode(' ', $player->applyEventSpecs);
+        }
+        
         return $players;
     }
 
@@ -246,7 +285,7 @@ class CompetitionController extends Controller
             // [1]查询轮次对应的中文名称
             $round = $info[1];
             // [2]查询录入规则对应中文名称
-            $format = DB::table('formats')->where('id', '=', $info[2])->first()->name;
+            $format = DB::table('formats')->where('id', '=', $info[2])->first();
 
             $event->round = $round;
             $event->format = $format;

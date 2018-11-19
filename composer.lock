@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dbfaa871ea8dffdd46697b934ea1455",
+    "content-hash": "a27dbf511db7f1de1f8970df27541abe",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -607,77 +607,6 @@
                 "validator"
             ],
             "time": "2018-09-25T20:47:26+00:00"
-        },
-        {
-            "name": "encore/laravel-admin",
-            "version": "v1.6.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/z-song/laravel-admin.git",
-                "reference": "2c7de6c1d8e3aad3c300a1ba3e8fa0f82403845d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/2c7de6c1d8e3aad3c300a1ba3e8fa0f82403845d",
-                "reference": "2c7de6c1d8e3aad3c300a1ba3e8fa0f82403845d",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/dbal": "2.*",
-                "laravel/framework": "~5.5",
-                "php": ">=7.0.0",
-                "symfony/dom-crawler": "~3.1|~4.0"
-            },
-            "require-dev": {
-                "fzaninotto/faker": "~1.4",
-                "intervention/image": "~2.3",
-                "laravel/browser-kit-testing": "^2.0",
-                "laravel/laravel": "~5.5",
-                "phpunit/phpunit": "~6.0",
-                "symfony/css-selector": "~3.1"
-            },
-            "suggest": {
-                "intervention/image": "Required to handling and manipulation upload images (~2.3).",
-                "spatie/eloquent-sortable": "Required to built orderable gird."
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Encore\\Admin\\AdminServiceProvider"
-                    ],
-                    "aliases": {
-                        "Admin": "Encore\\Admin\\Facades\\Admin"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Encore\\Admin\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "zsong",
-                    "email": "zosong@126.com"
-                }
-            ],
-            "description": "laravel admin",
-            "homepage": "https://github.com/z-song/laravel-admin",
-            "keywords": [
-                "admin",
-                "form",
-                "grid",
-                "laravel"
-            ],
-            "time": "2018-11-01T02:13:08+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -2077,63 +2006,6 @@
             "time": "2018-10-02T16:33:53+00:00"
         },
         {
-            "name": "symfony/dom-crawler",
-            "version": "v3.4.18",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "c705bee03ade5b47c087807dd9ffaaec8dda2722"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/c705bee03ade5b47c087807dd9ffaaec8dda2722",
-                "reference": "c705bee03ade5b47c087807dd9ffaaec8dda2722",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "require-dev": {
-                "symfony/css-selector": "~2.8|~3.0|~4.0"
-            },
-            "suggest": {
-                "symfony/css-selector": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\DomCrawler\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony DomCrawler Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-10-02T12:28:39+00:00"
-        },
-        {
             "name": "symfony/event-dispatcher",
             "version": "v3.4.17",
             "source": {
@@ -2390,7 +2262,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -2448,16 +2320,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8"
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d0cd638f4634c16d8df4508e847f14e9e43168b8",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
                 "shasum": ""
             },
             "require": {
@@ -2503,7 +2375,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2018-09-21T13:07:52+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
