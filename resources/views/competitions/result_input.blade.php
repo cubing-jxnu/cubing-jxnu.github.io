@@ -122,12 +122,22 @@ if(!empty($_POST['personId']))
         @foreach($players as $player)
         players[{{ $player->number }}] = '{{ $player->realname }}';
         @endforeach
-  
+
         if(players[player_number] != undefined){
             $("#player-name").val(players[player_number]);
         }
         else{
             $("#player-name").val('');
+        }
+        if($("#player-name").val() != ''){
+            for(var i = 0; i < {{ $event->format->expected_solve_count }}; i++){
+                $("#player-score-" + i).removeAttr("readonly");
+            }
+        }
+        else{
+            for(var i = 0; i < {{ $event->format->expected_solve_count }}; i++){
+                $("#player-score-" + i).attr("readonly","readonly");
+            }
         }
     });
 

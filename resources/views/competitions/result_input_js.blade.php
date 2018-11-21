@@ -95,7 +95,9 @@ $("document").ready(function(){
         // }
         $("#player-name").attr("readonly", "readonly");
         $("#player-id").focus();                        //聚焦在编号框
-
+        for(var i = 0; i < {{ $event->format->expected_solve_count }}; i++){
+            $("#player-score-" + i).attr("readonly","readonly");
+        }
 
 
          // $("#clearform").bind("click",function(){
