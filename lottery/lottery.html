@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+	<title>抽奖 - 江西师范大学Cubing魔方协会</title>
+	<link rel="icon" sizes="196x196" href="img/logo.png">
+	<link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css">
+	<style>
+		textarea{
+			width:100%;
+			height:280px;
+		}
+		.jumbotron{
+			margin-top: 20px;
+			text-align: center;
+		}
+		#start{
+			width:100%;
+		}
+		#onplayer{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color: #e6f4fe;">
+			<a class="navbar-brand" href="https://cubing-jxnu.github.io/"">
+				<img src="/images/icon.png" alt="logo" height="30" width="30" ">
+				Cubing师大
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	 	   		<span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" style="font-size: 14px;">
+					<li class="nav-item">
+						<a class="nav-link" href="https://cubing-jxnu.github.io/">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../intro/intro.html">协会概要</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../tutorial/tutorial.html">系列教程</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="../lottery/lottery.html">抽奖</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="wcaRegulations/Regulations_20180101.html">WCA规则</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">友情链接</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="https://cubingchina.com/">粗饼网</a>
+							<a class="dropdown-item" href="http://www.cstimer.net/">CSTimer</a>
+							<a class="dropdown-item" href="http://algdb.net/">AlgDb</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- end navbar -->
+		
+		<!-- container -->
+		<div class="container">
+			<!-- breadcrumb -->
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="https://cubing-jxnu.github.io/">首页</a></li>
+				<li class="breadcrumb-item active">抽奖</li>
+			</ol>
+			<!-- end breadcrumb -->
+
+			<div class="row">
+				<div class="col-2">
+					<h3>选手列表</h3>
+					<textarea id="players"></textarea>
+					<p>一行输入一个名字</p>
+				</div>
+				<div class="col-8">
+					<div class="jumbotron">
+						<h1 id="winner-name" class="display-3">点击下方按钮抽奖</h1>
+					</div>
+					<input id="start" class="btn btn-primary btn-lg" type="button" value="抽奖" onclick="roll()">
+				</div>
+				<div class="col-2">
+					<h3>中奖选手</h3>
+					<textarea id="winning" readonly=""></textarea>
+					<input id="resetRow" class="btn btn-sm btn-danger float-right" type="button" value="重新开始" onclick="resetLuckyDraw()">
+				</div>
+			</div>
+		</div>
+		<!-- end container -->
+
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script type="text/javascript" src="../script/jquery.min.js"></script>
+	<script type="text/javascript" src="../script/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lottery.js"></script>
+</body>
+</html>
